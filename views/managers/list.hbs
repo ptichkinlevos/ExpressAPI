@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список менеджеров</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Список менеджеров</h1>
+    <p><a href="/managers/create">Добавить менеджера</a></p>
+    <table>
+        <tr><th>ID_Менеджера</th><th>Фамилия</th><th>Имя</th><th>Отчество</th><th>Телефон</th></tr>
+        {{#each manager}}
+            <tr>
+                <td>{{this.ID_Manager}}</td>
+                <td>{{this.Surname}}</td>
+                <td>{{this.Name}}</td>
+                <td>{{this.Patronymic}}</td>
+                <td>{{this.Phone}}</td>
+                <td>
+                    <a href="/managers/edit/{{this.ID_Manager}}">Изменить</a> /
+                    <a href="/managers/delete/{{this.ID_Manager}}" method="POST" style="display:inline;">Удалить</a>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</body>
+<html>

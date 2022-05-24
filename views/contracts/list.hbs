@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Список клиентов</title>
+    <meta charset="utf-8" />
+    <style>
+        .text-block {
+        margin-left:-220px;
+            }	
+        body {
+        padding: 20px;
+        }
+        label {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1c87c9;
+        }
+        input {
+            width: 20%;
+            height: 28px;
+            padding: 4px 10px;
+            border: 1px solid #666;
+            background: #ffffff;
+            color: #000000;
+            font-size: 16px;
+        }
+        a.disabled {
+            pointer-events: none; /* делаем ссылку некликабельной */
+            cursor: default;  /* устанавливаем курсор в виде стрелки */
+            color: #999; /* цвет текста для нективной ссылки */
+        }
+    </style>
+</head>
+<body>
+    <div class="text-block">
+    <h1>Список видеокассет</h1>
+    <p><a href="/contracts/create">Добавить видеокассету</a></p>
+    {{!-- <table>
+        <tr><th>ID_Видеокассеты</th><th>Название</th><th>Жанр</th><th>Страна</th><th>Год</th><th>Режиссёр</th>
+            <th>Наличие</th><th>Ограничение</th><th>Цена/Сутки</th><th>Залог</th></tr>
+        {{#each videocassette}}
+            <tr>
+                <td>{{this.ID_Videocassette}}</td>
+                <td>{{this.Title}}</td>
+                <td>{{this.Genre}}</td>
+                <td>{{this.Country}}</td>
+                <td>{{this.Year}}</td>
+                <td>{{this.Director}}</td>
+                <td>{{this.Availability}}</td>
+                <td>{{this.Limitation}}</td>
+                <td>{{this.Price_Day}}</td>
+                <td>{{this.Deposit}}</td>
+                <td>
+                    <a href="/contracts/edit/{{this.ID_Contract}}">Изменить</a> /
+                    <a href="/contracts/delete/{{this.ID_Contract}}" method="POST" style="display:inline;">Удалить</a>
+                </td>
+            </tr>
+        {{/each}}
+    </table> --}}
+    <label>ID</label><br>
+    <input type="output" value="{{contract.ID_Videocassette}}"/><br>
+
+    <script>
+        let next = {{contract.ID_Videocassette}}
+        let previous = {{contract.ID_Videocassette}}
+
+        console.log(next)
+        console.log(previous)
+    </script>
+    {{#if isPrevious}}
+        <a style="font-size:large;align-content:center" 
+        href="http://localhost:3000/contracts/" onclick="location.href = this.href + previous; return false;">Предыдущий</a>
+    {{else}}
+        <a style="font-size:large;align-content:center" 
+        href="http://localhost:3000/contracts/" onclick="location.href = this.href + previous; return false;" class="disabled">Предыдущий</a>
+    {{/if}}
+    
+    {{#if isNext}}
+        <a style="font-size:large;align-content:center" 
+        href="http://localhost:3000/contracts/" onclick="location.href = this.href + next; return false;">Следующий</a>
+    {{else}}
+        <a style="font-size:large;align-content:center" 
+        href="http://localhost:3000/contracts/" onclick="location.href = this.href + next; return false;" class="disabled">Следующий</a>
+    {{/if}}
+
+    <script>
+        next++
+        previous--
+    </script>
+</body>
+</html>

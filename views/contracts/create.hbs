@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление видеокассеты</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+</head>
+<body>
+    <h1>Добавление видеокассеты</h1>
+     <form method="POST">
+        <label>Название</label><br>
+        <input name="Title" placeholder="Введите название" class="field" required autofocus/><br>
+
+        <label>Жанр</label><br>
+        <input name="Genre" placeholder="Введите жанр" class="field" required/><br>
+
+        <label>Страна</label><br>
+        <input name="Country" placeholder="Введите страну" class="field" required/><br>
+
+        <label>Год</label><br>
+        <input name="Year" type="year" placeholder="Введите год" class="field" required/><br>
+
+        <label>Режиссёр</label><br>
+        <input name="Director" placeholder="Введите режиссёра" class="field" required/><br>
+
+        <label>Наличие</label><br>
+        <input name="Availability" minlength="2" maxlength="3" placeholder="Введите наличие" class="field" required/><br>
+
+        <label>Ограничение</label><br>
+        <input name="Limitation" type="number" min="0" max="18" placeholder="Введите ограничение" class="field" required/><br>
+
+        <label>Цена/Сутки</label><br>
+        <input name="Price_Day" type="number" min="10" placeholder="Введите цену в сутки" class="field" required/><br>
+        
+        <label>Залог</label><br>
+        <input name="Deposit" type="number" min="50" placeholder="Введите залог" class="field" required/><br>
+
+        <input type="submit" value="Добавить" />
+     </form>
+     <a href="/videocassette">К списку видеокассет</a><br><br><br>
+</body>
+<html>

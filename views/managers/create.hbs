@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление менеджера</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+</head>
+<body>
+    <h1>Добавление менеджера</h1>
+     <form method="POST">
+        <label>Фамилия</label><br>
+        <input name="Surname" placeholder="Введите фамилию" class="field" required autofocus/><br>
+
+        <label>Имя</label><br>
+        <input name="Name" placeholder="Введите имя" class="field" required/><br>
+
+        <label>Отчество</label><br>
+        <input name="Patronymic" placeholder="Введите отчество" class="field" required/><br>
+
+        <label>Телефон</label><br>
+        <input name="Phone" minlength="11" placeholder="Введите телефон" class="field" required/><br>
+
+        <input type="submit" value="Добавить" />
+     </form>
+     <a href="/managers">К списку менеджеров</a><br><br><br>
+</body>
+<html>

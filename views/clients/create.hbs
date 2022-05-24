@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление клиента</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+</head>
+<body>
+    <h1>Добавление клиента</h1>
+     <form method="POST" action="/clients/create">
+        <label>Фамилия</label><br>
+        <input name="Surname" placeholder="Введите фамилию" class="field" required autofocus/><br>
+
+        <label>Имя</label><br>
+        <input name="Name" placeholder="Введите имя" class="field" required/><br>
+
+        <label>Отчество</label><br>
+        <input name="Patronymic" placeholder="Введите отчество" class="field" required/><br>
+
+        <label>Адрес</label><br>
+        <input name="Address" placeholder="Введите адрес" class="field" required/><br>
+
+        <label>Телефон</label><br>
+        <input name="Phone" minlength="11" placeholder="Введите телефон" class="field" required/><br>
+
+        <label>Паспорт</label><br>
+        <input name="Series_Number" minlength="10" placeholder="Введите серию и номер" class="field" required/><br>
+
+        <label>Возраст</label><br>
+        <input name="Age" type="number" min="1" max="110" placeholder="Введите возраст" class="field" required/><br>
+        
+        <label>Пол</label><br>
+        <input name="Gender" maxlength="1" placeholder="Введите пол" class="field" required/><br>
+
+        <input type="submit" value="Добавить" />
+     </form>
+     <a href="/clients">К списку клиентов</a><br><br><br>
+</body>
+<html>

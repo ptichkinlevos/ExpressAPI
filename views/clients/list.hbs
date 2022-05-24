@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список клиентов</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Список клиентов</h1>
+    <p><a href="/clients/create">Добавить клиента</a></p>
+    <table>
+        <tr><th>ID_Клиента</th><th>Фамилия</th><th>Имя</th><th>Отчество</th><th>Адрес</th>
+            <th>Телефон</th><th>Паспорт</th><th>Возраст</th><th>Пол</th></tr>
+        {{#each client}}
+            <tr>
+                <td>{{this.ID_Client}}</td>
+                <td>{{this.Surname}}</td>
+                <td>{{this.Name}}</td>
+                <td>{{this.Patronymic}}</td>
+                <td>{{this.Address}}</td>
+                <td>{{this.Phone}}</td>
+                <td>{{this.Series_Number}}</td>
+                <td>{{this.Age}}</td>
+                <td>{{this.Gender}}</td>
+                <td>
+                    <a href="/clients/edit/{{this.ID_Client}}">Изменить</a> /
+                    <a href="/clients/delete/{{this.ID_Client}}" method="POST" style="display:inline;">Удалить</a>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</body>
+<html>

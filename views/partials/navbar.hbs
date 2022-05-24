@@ -1,0 +1,38 @@
+<nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">АИС проката видеокассет</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        {{#if isIndex}}
+        <li class="active"><a href="/">Главная</a></li>
+        {{else}}
+        <li><a href="/">Главная</a></li>
+        {{/if}}
+
+        {{#if isClients}}
+        <li class="active"><a href="/clients">Клиенты</a></li>
+        {{else}}
+        <li><a href="/clients">Клиенты</a></li>
+        {{/if}}  
+
+        {{#if isManagers}}
+        <li class="active"><a href="/managers">Менеджеры</a></li>
+        {{else}}
+        <li><a href="/managers">Менеджеры</a></li>
+        {{/if}}  
+
+        {{#if isVideocassette}}
+        <li class="active"><a href="/videocassette">Видеокассеты</a></li>
+        {{else}}
+        <li><a href="/videocassette">Видеокассеты</a></li>
+        {{/if}}
+
+        {{#if isContracts}}
+        <li class="active"><a href="/contracts/1">Договоры</a></li>
+        {{else}}
+        <li><a href="/contracts/1">Договоры</a></li>
+        {{/if}}  
+        
+      </ul>
+    </div>
+  </nav>

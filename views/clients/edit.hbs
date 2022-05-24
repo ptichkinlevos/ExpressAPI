@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Изменение клиента</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+</head>
+<body>
+    <h1>Изменение клиента</h1>
+     <form action="/clients/edit" method="POST">
+        <input type="hidden" name="ID_Client" value="{{client.ID_Client}}" />
+        
+        <label>Фамилия</label><br>
+        <input name="Surname" value="{{client.Surname}}" placeholder="Введите фамилию" class="field" required/><br>
+
+        <label>Имя</label><br>
+        <input name="Name" value="{{client.Name}}" placeholder="Введите имя" class="field" required/><br>
+
+        <label>Отчество</label><br>
+        <input name="Patronymic" value="{{client.Patronymic}}" placeholder="Введите отчество" class="field" required/><br>
+
+        <label>Адрес</label><br>
+        <input name="Address" value="{{client.Address}}" placeholder="Введите адрес" class="field" required/><br>
+
+        <label>Телефон</label><br>
+        <input name="Phone" value="{{client.Phone}}" placeholder="Введите телефон" class="field" required/><br>
+
+        <label>Возраст</label><br>
+        <input name="Age" type="number" min="1" max="110" value="{{client.Age}}" placeholder="Введите возраст" class="field" required/><br>
+        
+        <label>Пол</label><br>
+        <input name="Gender" value="{{client.Gender}}" placeholder="Введите пол" class="field" required/><br>
+
+        <input type="submit" value="Изменить" />
+     </form>
+     <a href="/clients">К списку клиентов</a><br><br><br>
+</body>
