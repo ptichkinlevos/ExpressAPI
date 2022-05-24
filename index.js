@@ -14,6 +14,8 @@ const hbs = exphbs.create({
     extname: 'hbs'
 })
 
+let x = 5
+
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
